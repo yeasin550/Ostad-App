@@ -5,6 +5,9 @@ import module from "../../assets/module.png"
 import realtime from "../../assets/realtime.png"
 import learn from "../../assets/learn.png"
 import support from "../../assets/support.png"
+import codeMama from "../../assets/codemama-img.webp"
+import skillable from "../../assets/skillable-img.webp"
+import { FaArrowRight } from "react-icons/fa"
 
 
 const LiveCourseContents = () => {
@@ -57,6 +60,19 @@ const LiveCourseContents = () => {
                     </div>
                     <h1 className="font-bold">Intensive Job Placement Support</h1>
                     <p>After Course completion, get intensive job placement support including CV, profile build and job application.</p>
+                </div>
+            </div>
+
+            <div className="flex items-center gap-5 my-12">
+                <div className="w-1/2 space-y-5 p-2 bg-white shadow-lg rounded-lg">
+                    <h1 className="text-2xl font-bold">Explore your coding knowledge with CodeMama</h1>
+                    <button className="bg-black flex items-center gap-2 py-2 px-5 rounded-md text-white">Check Codemama <FaArrowRight className="text-sm" /></button>
+                    <img src={codeMama} className="rounded-md w-full h-64 border" alt="" />
+                </div>
+                <div className="w-1/2 space-y-5 p-2 bg-white shadow-lg rounded-lg">
+                    <h1 className="text-2xl font-bold">Assess skills with Skillable Skillable & get free certificate</h1>
+                    <button className="bg-black flex items-center gap-2 py-2 px-5 rounded-md text-white">Check Codemama <FaArrowRight className="text-sm" /></button>
+                    <img src={skillable} className="rounded-md w-full h-64 border" alt="" />
                 </div>
             </div>
         </div>

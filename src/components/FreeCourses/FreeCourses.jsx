@@ -7,9 +7,9 @@ import { FaAngleRight } from "react-icons/fa";
 
 const FreeCourses = () => {
     return (
-        <div className="py-12 w-10/12 mx-auto">
+        <div className="py-12 md:w-10/12 w-11/12 mx-auto">
             {/* Title Bar */}
-            <div className="flex items-center justify-between mb-8">
+            <div className="md:flex items-center justify-between mb-8">
                 <div className="flex items-center gap-3">
                 <h2 className="text-4xl font-bold">Free Courses</h2>
                     <img src={free} className="w-8" alt="" />
@@ -21,7 +21,7 @@ const FreeCourses = () => {
             {/* Cards Section */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 {/* Card 1 */}
-                <div className="border border-transparent bg-white hover:border-gray-300 rounded-lg transition duration-200 cursor-pointer">
+                <div className="border border-transparent bg-white hover:border-black rounded-lg transition duration-200 cursor-pointer">
                     <img
                         src={quickstart}
                         alt="Course 2"
@@ -30,12 +30,12 @@ const FreeCourses = () => {
                     <div className="p-4">
 
                         <h3 className="text-xl font-semibold mb-2">Quick Start Your SEO Journey</h3> <br />
-                        <button className="flex items-center justify-center gap-3 bg-gray-200 hover:bg-gray-300 w-full text-sm py-2 rounded-md font-semibold mt-auto">SEE DETAILS <FaAngleRight />
+                        <button className="flex items-center justify-center gap-3 bg-gray-200 hover:bg-black w-full text-sm py-2 rounded-md font-semibold mt-auto">SEE DETAILS <FaAngleRight />
                         </button>
                     </div>
                 </div>
                 {/* Card 2 */}
-                <div className="border border-transparent bg-white hover:border-gray-300 rounded-lg transition duration-200 cursor-pointer">
+                <div className="border border-transparent bg-white hover:border-black rounded-lg transition duration-200 cursor-pointer">
                     <img
                         src={wordpress}
                         alt="Course 2"
@@ -51,7 +51,7 @@ const FreeCourses = () => {
                 </div>
 
                 {/* Card 3 */}
-                <div className="border border-transparent bg-white hover:border-gray-300 rounded-lg transition duration-200 cursor-pointer">
+                <div className="border border-transparent bg-white hover:border-black rounded-lg transition duration-200 cursor-pointer">
                     <img
                         src={printon}
                         alt="Course 3"
