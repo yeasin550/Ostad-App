@@ -7,7 +7,7 @@ const LearnerReviews = () => {
     return (
         <div>
 
-            <div className="py-12 w-10/12 mx-auto">
+            <div className="py-12 w-11/12 md:w-10/12 mx-auto">
                 <div className="text-center space-y-3">
                     <h1 className="text-4xl font-bold">Learner Reviews</h1>
                     <p>See what our learners are saying</p>
@@ -152,21 +152,21 @@ const LearnerReviews = () => {
             <div className="bg-gradient-to-r from-[#05313B] via-[#19B17D] to-[#07413B] py-16 md:px-24 px-4">
                 <div className="bg-white rounded-2xl md:flex items-center justify-between gap-12">
                     <img src={appbanner} className="h-80" alt="" />
-                    <div className="space-y-2">
+                    <div className="space-y-2 md:text-left text-center">
                         <h1 className="text-3xl font-bold">Download Ostad App</h1>
                         <p>Get the best experience of live classes, Download Ostad App now</p>
-                        <div className="flex flex-wrap gap-5">
-                            <div className="flex items-center justify-center gap-3 w-56 bg-gray-200 hover:bg-gray-300 px-8 py-2 text-sm font-bold rounded-md cursor-pointer">
+                        <div className="flex flex-wrap gap-5 md:mx-0 mx-5">
+                            <div className="flex items-center justify-center gap-3 md:w-56 w-full bg-gray-200 hover:bg-gray-300 px-8 py-2 text-sm font-bold rounded-md cursor-pointer">
 
                                 <img src={playStore} alt="Play Store" className="w-6 object-contain" />
                                 ANDROID
                             </div>
-                            <div className="flex items-center justify-center gap-3 w-56 bg-gray-200 hover:bg-gray-300 px-8 py-2 text-sm font-bold rounded-md cursor-pointer">
+                            <div className="flex items-center justify-center gap-3 md:w-56 w-full bg-gray-200 hover:bg-gray-300 px-8 py-2 text-sm font-bold rounded-md cursor-pointer">
 
                                 <img src={appStore} alt="App Store" className="w-6 object-contain" />
                                 iOS/macOS
                             </div>
-                            <div className="flex items-center justify-center gap-3 w-56 bg-gray-200 hover:bg-gray-300 px-8 py-2 text-sm font-bold rounded-md cursor-pointer">
+                            <div className="flex items-center justify-center gap-3 md:w-56 w-full bg-gray-200 hover:bg-gray-300 px-8 py-2 text-sm font-bold rounded-md cursor-pointer">
 
                                 <img src={winStore} alt="Windows Store" className="w-6 object-contain" />
                                 WINDOWS

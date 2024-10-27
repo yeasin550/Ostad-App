@@ -4,10 +4,14 @@ import FreeCourses from "../../components/FreeCourses/FreeCourses";
 import LearnerReviews from "../../components/LearnerReviews/LearnerReviews";
 import LiveCourseContents from "../../components/LiveCourseContents/LiveCourseContents";
 import OstadForBusiness from "../../components/OstadForBusinessCard/OstadForBusiness";
+import WatchFreeWebinar from "../../components/WatchFreeWebinar/WatchFreeWebinar";
+import AllCourses from "../../components/AllCourses/AllCourses";
 
 const Home = () => {
   return <div className="bg-[#F9F9FA]">
-    <Banner/>
+    <Banner />
+    <AllCourses/>
+    <WatchFreeWebinar/>
     <CareerGoal/>
     <LiveCourseContents />
     <OstadForBusiness />

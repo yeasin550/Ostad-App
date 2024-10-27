@@ -10,7 +10,7 @@ const Navbar = () => {
 
     const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
     return (
-        <nav className="bg-white shadow-md py-4 px-4 text-[13px] font-bold text-gray-700">
+        <nav className="bg-white shadow-md py-3 px-4 text-[13px] font-bold text-gray-700">
             <div className="flex items-center justify-between">
 
                 {/* Left Side: Logo and Search */}
@@ -19,7 +19,7 @@ const Navbar = () => {
                     <input
                         type="text"
                         placeholder="Search courses"
-                        className="p-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="p-2 border hidden md:block border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
                     {/* Middle: Nav Links or route */}
                     <div className="hidden md:flex items-center space-x-2">
