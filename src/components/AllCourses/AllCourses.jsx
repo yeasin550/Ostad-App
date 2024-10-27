@@ -1,10 +1,16 @@
 /* eslint-disable react/prop-types */
 import { useState, useRef } from 'react';
-import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
+import { FaAngleLeft, FaAngleRight, FaArrowRight } from 'react-icons/fa';
 import book from "../../assets/book.svg";
 import PythonThumbnail from "../../assets/AllCourses/Python-Thumbnail.jpg";
 import appDevelopment from "../../assets/AllCourses/app-development.jpg";
 import php from "../../assets/AllCourses/php.jpg";
+import aspnet from "../../assets/AllCourses/aspnet.jpg";
+import wordpress from "../../assets/AllCourses/wordpress.jpg";
+import CodingInterviewPreparation from "../../assets/AllCourses/Coding-Interview-Preparation.jpg";
+import javascript from "../../assets/AllCourses/javascript.jpg";
+import sqa from "../../assets/AllCourses/sqa.jpg";
+
 import uiux from "../../assets/AllCourses/uiux.jpg";
 import DigitalProductManagement from "../../assets/AllCourses/Digital-Product-Management.jpg";
 import DigitalMarketing from "../../assets/AllCourses/Digital-Marketing.jpg";
@@ -41,6 +47,54 @@ const AllCourses = () => {
             batch: 9,
             seatsLeft: 68,
             daysLeft: 33,
+        },
+        {
+            title: 'Advanced Blockchain Development',
+            image: php,
+            category: 'Web & App Development',
+            batch: 5,
+            seatsLeft: 4,
+            daysLeft: 12,
+        },
+        {
+            title: 'Full Stack Web Development with ASP.Net Core',
+            image: aspnet,
+            category: 'Web & App Development',
+            batch: 4,
+            seatsLeft: 90,
+            daysLeft: 1,
+        },
+        {
+            title: 'WordPress Theme Development',
+            image: wordpress,
+            category: 'Web & App Development',
+            batch: 9,
+            seatsLeft: 241,
+            daysLeft: 60,
+        },
+        {
+            title: 'Coding Interview Preparation (Local+Remote Job)',
+            image: CodingInterviewPreparation,
+            category: 'Web & App Development',
+            batch: 4,
+            seatsLeft: 124,
+            daysLeft: 30,
+        },
+        {
+            title: 'Full Stack Web Development with JavaScript (MERN)',
+            image: javascript,
+            category: 'Web & App Development',
+            batch: 9,
+            seatsLeft: 241,
+            daysLeft: 60,
+        },
+        {
+            title: 'SQA: Manual & Automated Testing',
+            image: sqa,
+            category: 'Web & App Development',
+            batch: 9,
+            seatsLeft: 19,
+            daysLeft: 15,
         },
         {
             title: 'UI UX Design Career Track Program',
@@ -90,14 +144,6 @@ const AllCourses = () => {
             seatsLeft: 8,
             daysLeft: 6,
         },
-        {
-            title: 'Advanced Blockchain Development',
-            image: php,
-            category: 'Web & App Development',
-            batch: 5,
-            seatsLeft: 4,
-            daysLeft: 12,
-        },
     ];
 
     const filteredCourses = courses.filter(
@@ -128,7 +174,7 @@ const AllCourses = () => {
     );
 
 const CourseCard = ({ image, title, batch, seatsLeft, daysLeft }) => (
-    <div className="bg-white rounded-md border border-black shadow-md">
+    <div className="bg-white rounded-md border hover:border-red-500 border-black shadow-md">
         <div className="relative overflow-hidden">
             <img
                 src={image}
@@ -144,7 +190,7 @@ const CourseCard = ({ image, title, batch, seatsLeft, daysLeft }) => (
 
         <div className="flex flex-col h-full space-y-2 p-4">
             <h3 className="font-medium text-lg">{title}</h3>
-            <button className="w-full py-2 px-4 mt-auto bg-gray-100 rounded-lg text-gray-700 hover:bg-gray-200 transition">
+            <button className="w-full py-2 px-4 mt-auto bg-gray-200 rounded-lg text-gray-700 hover:bg-gray-300 transition">
                 SEE DETAILS
             </button>
         </div>
@@ -153,16 +199,17 @@ const CourseCard = ({ image, title, batch, seatsLeft, daysLeft }) => (
 
 
     return (
-        <div className="w-full max-w-6xl mx-auto p-6 bg-white rounded-xl">
+        <div className="md:w-10/12 mx-auto p-6 bg-white rounded-xl">
             <div className="mb-8 text-center">
                 <div className="flex items-center justify-center gap-3">
                     <h1 className="text-4xl font-bold">All Courses</h1>
                     <img src={book} className="w-8 h-8" alt="Book icon" />
                 </div>
+                {/* tab here */}
                 <div className="relative mt-6">
                     <button
                         onClick={() => scroll('left')}
-                        className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg rounded-full p-2"
+                        className="absolute border border-black left-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg rounded-full p-2"
                     >
                         <FaAngleLeft className="w-6 h-6 text-gray-700" />
                     </button>
@@ -185,13 +232,13 @@ const CourseCard = ({ image, title, batch, seatsLeft, daysLeft }) => (
 
                     <button
                         onClick={() => scroll('right')}
-                        className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg rounded-full p-2"
+                        className="absolute border border-black right-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg rounded-full p-2"
                     >
                         <FaAngleRight className="w-6 h-6 text-gray-700" />
                     </button>
                 </div>
             </div>
-
+            {/* card here */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 {filteredCourses.length > 0 ? (
                     filteredCourses.map((course, index) => (
@@ -203,6 +250,10 @@ const CourseCard = ({ image, title, batch, seatsLeft, daysLeft }) => (
                     </p>
                 )}
             </div>
+
+            <button className="flex items-center justify-center text-sm w-72 mx-auto py-3 mt-8 gap-2 px-6 font-bold hover:bg-[#bfc5ce] rounded-md bg-[#D0D5DD]">
+                SEE ALL <FaArrowRight className="text-base" />
+            </button>
         </div>
     );
 };
