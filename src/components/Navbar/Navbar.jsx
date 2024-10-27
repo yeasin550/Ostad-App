@@ -22,7 +22,7 @@ const Navbar = () => {
 
     const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
     return (
-        <nav className="bg-white shadow-md py-3 md:px-4 text-[13px] font-bold text-gray-700">
+        <nav className="bg-white shadow-sm py-3 md:px-4 text-[13px] font-bold text-gray-700 sticky top-0 z-50">
             <div className="flex items-center justify-between">
 
                 {/* Left Side: Logo and Search */}
@@ -43,7 +43,7 @@ const Navbar = () => {
                     <div className="hidden md:flex items-center space-x-2">
                         <a href="#special-offer" className="flex items-center gap-2 border border-red-500 rounded-md py-2 px-2 ">
                             <img src={Offer} className="w-6" alt="" /> SPECIAL OFFER</a>
-                        <a href="#codemama" className=" rounded-md py-2 px-2 hover:bg-gray-200 ">CODEMAMA</a>
+                        <a href="https://codemama.io/" target="_blank" className=" rounded-md py-2 px-2 hover:bg-gray-200 ">CODEMAMA</a>
                         <a href="#free-courses" className=" rounded-md py-2 px-2 hover:bg-gray-200 ">FREE COURSES</a>
                         <a href="#blog" className=" rounded-md py-2 px-2 hover:bg-gray-200 ">BLOG</a>
                         {/* DOWNLOAD with Dropdown */}
